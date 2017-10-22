@@ -14,9 +14,10 @@
         limitations under the License.*/
 
 package com.kabo.core.behavior;
-import org.jbehave.core.steps.InjectableStepsFactory;
 
 public interface Behavior {
-     InjectableStepsFactory StepDefinations(Object o);
+
+
+/* For Future use*/
 
 }

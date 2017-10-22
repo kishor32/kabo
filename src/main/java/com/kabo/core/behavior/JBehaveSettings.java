@@ -31,13 +31,14 @@ public final class JBehaveSettings extends ConfigurableEmbedder{
        return t;
     }
 
-    private void setControls(){
+    private EmbedderControls setControls(){
         final EmbedderControls embedderControls = new EmbedderControls ( );
         embedderControls.ignoreFailureInStories ();
         embedderControls.doVerboseFailures (false);
         embedderControls.ignoreFailureInView ( );
         embedderControls.useThreads (1);
         embedderControls.failOnStoryTimeout ();
+        return embedderControls;
     }
 
     @Override
@@ -55,7 +56,7 @@ public final class JBehaveSettings extends ConfigurableEmbedder{
         if(timeOutInSeconds>0){
             embedder.useTimeoutParsers(this.addStoryTimeOut(timeOutInSeconds));
         }
-        //this.setControls();
+        embedder.useEmbedderControls(this.setControls());
         final Configuration configuration = configuration ();
         embedder.useConfiguration(configuration);
         if(stepDefinitions.length==0){
@@ -63,6 +64,7 @@ public final class JBehaveSettings extends ConfigurableEmbedder{
         }
         InstanceStepsFactory instanceStepsFactory = new InstanceStepsFactory(configuration(),stepDefinitions);
         embedder.useStepsFactory(instanceStepsFactory);
+
     }
 
     public void run() throws Throwable {

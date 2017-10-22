@@ -4,7 +4,7 @@ import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
-public interface StepDefinition  {
+public interface StepDefinition {
 
 
     @Given("a negative scenario")
@@ -22,4 +22,5 @@ public interface StepDefinition  {
 
         return true;
     }
+
 }
