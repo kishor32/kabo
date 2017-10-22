@@ -7,6 +7,7 @@ So that I can achieve a business goal
 
 Scenario: scenario description
 
-Given a positive scenario
-Given something set
-
+Given something
+When I do this
+Then that should happened
+And That should happen too.

@@ -1,5 +1,6 @@
 .idea
 target
+<<<<<<< HEAD
 stub.java
 <<<<<<< HEAD
 xyzz.java
@@ -8,3 +9,7 @@ xyzz.java
 LICENSE
 kabo.properties
 >>>>>>> kabobase
+=======
+LICENSE
+kabo.properties
+>>>>>>> 79ca9f0a50544966346c6cd6be48ce6bb27b5ccc

@@ -3,16 +3,35 @@
 import com.kabo.core.behavior.StepDefinition;
 import com.kabo.core.report.Report;
 import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.Then;
+import org.jbehave.core.annotations.When;
 
 
 public class GivenStepDefination implements StepDefinition{
 
 
-    @Given("something set")
-    public void test12(){
+    @Given("something")
+    public void something(){
 
-        System.out.println("dbshdbsjd");
-        Report.write("test", "des", true, this.positive());
+        System.out.println("something");
+
     }
 
+    @When("I do this")
+    public void do_this(){
+
+        System.out.println("Do this");
+    }
+
+    @Then("that should happened")
+    public void assert_what_happened(){
+
+        System.out.println("that should happened");
+    }
+
+    @Then("That should happen too.")
+    public void oh_some_more_assertion(){
+
+        System.out.println("That should happen too");
+    }
 }
