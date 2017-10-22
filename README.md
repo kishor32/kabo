@@ -12,17 +12,21 @@ From now on forget about creating webDriver instances , forget about the pain yo
 
 # Installation
 The maven dependency is given below
- 
+
+```
  <dependency>
-            <groupId>com.kabo</groupId>
-            <artifactId>com.kabo</artifactId>
-            <version>0.1</version>
-        </dependency>
+ <groupId>com.kabo</groupId>
+ <artifactId>com.kabo</artifactId>
+ <version>0.1</version>
+ </dependency>
+```
+
         
 Please note that this dependency will not work since the project is yet to be officially relased . 
 
 To Create any driver instance, just create a file kabo.properties in your project root folder and copy past the follwing:
 
+```
 #kabo automation framework
 #Do Not Change the below Keys. Change the value as per your choice
 
@@ -34,3 +38,4 @@ PROCESSOR=64
 
 PATH_TO_DRIVER=some path
 # ------------------------
+```
