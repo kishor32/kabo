@@ -9,3 +9,19 @@ What kabo will do?
 It will be a pain killer while automating a UI project. Hey folks , you do not have to worry about maintaining bulk excel files for hybrid automation framework. kabo will do it for you using Behavior-driven development approach. Automation does not mean writing ugly driver.findElement code everywhere in the test scripts. It should be well organized so that maintenance become easy.
 
 From now on forget about creating webDriver instances , forget about the pain you have endured to handles windows. Your only concentration should be on business logic or we call the core functionality.
+
+# Installation
+
+To Create any driver instance just create file kabo.properties in your project root folder and copy past the follwing:
+
+#kabo automation framework
+#Do Not Change the below Keys. Change the value as per your choice
+
+BROWSER=chrome
+
+PLATFORM=Mac OS
+
+PROCESSOR=64
+
+PATH_TO_DRIVER=some path
+# ------------------------
