@@ -11,17 +11,21 @@ It will be a pain killer while automating a UI project. Hey folks , you do not h
 From now on forget about creating webDriver instances , forget about the pain you have endured to handles windows. Your only concentration should be on business logic or we call the core functionality.
 
 # Installation
+The maven dependency is given below
 
-To Create any driver instance just create file kabo.properties in your project root folder and copy past the follwing:
+<dependency>
+            <groupId>com.kabo</groupId>
+            <artifactId>com.kabo</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+Please note that this dependency will not work since the project is yet to be officially relased . 
+
+To Create any driver instance, just create a file kabo.properties in your project root folder and copy past the follwing:
 
 #kabo automation framework
 #Do Not Change the below Keys. Change the value as per your choice
-
 BROWSER=chrome
-
 PLATFORM=Mac OS
-
 PROCESSOR=64
-
 PATH_TO_DRIVER=some path
-# ------------------------
+#------------------------
