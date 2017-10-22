@@ -1,4 +1,10 @@
 .idea
 target
 stub.java
+<<<<<<< HEAD
 xyzz.java
+=======
+xyzz.java
+LICENSE
+kabo.properties
+>>>>>>> kabobase
