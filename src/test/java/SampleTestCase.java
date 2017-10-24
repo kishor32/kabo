@@ -1,5 +1,4 @@
 
-import com.kabo.core.behavior.StepDefinition;
 import com.kabo.core.behavior.TestRunner;
 
 public class SampleTestCase {

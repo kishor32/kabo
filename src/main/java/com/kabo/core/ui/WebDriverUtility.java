@@ -1,19 +1,23 @@
 
 package com.kabo.core.ui;
 
-public class WebDriverUtility extends AbstractDriver{
+import org.openqa.selenium.remote.DesiredCapabilities;
 
+public class WebDriverUtility extends AbstractDriver{
 
     private WebDriverUtility(){
         super();
     }
 
-    public static WebDriverUtility webDriverUtility=new WebDriverUtility();
+    private static WebDriverUtility webDriverUtility;
 
     public static WebDriverUtility getWebDriverUtility(){
-
         return webDriverUtility;
     }
 
 
+    @Override
+    public DesiredCapabilities setCapabilities(DesiredCapabilities capabilities) {
+        return null;
+    }
 }
