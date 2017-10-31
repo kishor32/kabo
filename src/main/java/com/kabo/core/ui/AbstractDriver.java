@@ -7,19 +7,24 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
-public abstract class AbstractDriver {
+public abstract class AbstractDriver extends Options{
 
     private WebDriver driver = null;
     private final String BROWSER = Utility.getValueFromPropertyFile("BROWSER").toLowerCase();
     private final String PATH_TO_DRIVER = Utility.getValueFromPropertyFile("PATH_TO_DRIVER").toLowerCase();
 
-    private AbstractDriver setDriver( ) {
-        if (BROWSER.contains("chrome")) {
+    public AbstractDriver setDriver(boolean withCapabilities, boolean withOptions) {
+        if (BROWSER.contains("chrome") && !withCapabilities && !withOptions) {
             System.setProperty("webdriver.chrome.driver", PATH_TO_DRIVER);
             driver = new ChromeDriver();
+        }else if(BROWSER.contains("chrome") && withCapabilities && !withOptions) {
+            System.setProperty("webdriver.chrome.driver", PATH_TO_DRIVER);
+            driver = new ChromeDriver(Capabilities.getCapabilityInstance().getCapabilities());
+        }else if(BROWSER.contains("chrome") && !withCapabilities && withOptions) {
+            System.setProperty("webdriver.chrome.driver", PATH_TO_DRIVER);
+            driver = new ChromeDriver(this.chromeOption());
         } else if (BROWSER.contains("firefox") || BROWSER.toLowerCase().contains("mozilla")) {
             System.setProperty("webdriver.gecko.driver", PATH_TO_DRIVER);
             driver = new FirefoxDriver();
@@ -39,10 +44,7 @@ public abstract class AbstractDriver {
         return this;
     }
 
-    public abstract DesiredCapabilities setCapabilities(DesiredCapabilities capabilities );
-
-
-    private  void capbility(){
-        DesiredCapabilities capabilities=new DesiredCapabilities();
+    protected WebDriver getDriver(){
+        return driver;
     }
 }

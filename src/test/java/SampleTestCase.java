@@ -1,7 +1,11 @@
 
 import com.kabo.core.behavior.TestRunner;
 
-public class SampleTestCase {
+public class SampleTestCase extends WebDriverUtility {
+
+    private SampleTestCase( ) {
+        super();
+    }
 
 
     public  static void main(String[]args){
@@ -9,5 +13,4 @@ public class SampleTestCase {
         TestRunner testRunner=new TestRunner();
 
     }
-
 }
